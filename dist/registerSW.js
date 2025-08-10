@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/Yova-Sales-Tracker/sw.js', { scope: '/Yova-Sales-Tracker/' })})}

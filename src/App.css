@@ -1,0 +1,88 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #F8F9FA;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 80px; /* Space for tab bar */
+}
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: white;
+  border-top: 1px solid #E5E5EA;
+  padding: 8px 0;
+  height: 80px;
+  z-index: 1000;
+}
+
+.tab-button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #8E8E93;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s ease;
+}
+
+.tab-button:hover {
+  color: #09B1BA;
+}
+
+.tab-button.active {
+  color: #09B1BA;
+}
+
+.tab-button span {
+  margin-top: 4px;
+}
+
+.add-button .add-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.add-button.active .add-icon {
+  background-color: #09B1BA;
+  color: white;
+}
+
+.add-button:hover .add-icon {
+  background-color: #09B1BA;
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .tab-button {
+    font-size: 11px;
+  }
+  
+  .tab-bar {
+    height: 70px;
+  }
+  
+  .main-content {
+    padding-bottom: 70px;
+  }
+}
